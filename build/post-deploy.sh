@@ -9,10 +9,12 @@ echo "Copying app files ..."
 mv /home/site/repository/app/* /home/site/wwwroot/
 mv /home/site/repository/index.php /home/site/wwwroot
 mv /home/site/repository/testphp.php /home/site/wwwroot
+cp /home/site/wwwroot/index.php /home/site/wwwroot/idp
 
-BASEURL="https://$WEBSITE_HOSTNAME/idp/www"
+BASEURL="https://$WEBSITE_HOSTNAME"
 sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/config-templates/config.php
-
+sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/index.php
+sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/index.php
 
 echo "Copying initial user data to /data if needed"
 if [ ! -d /data/config ]; then

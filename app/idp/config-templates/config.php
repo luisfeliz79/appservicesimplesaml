@@ -28,7 +28,8 @@ $config = [
      * reverse proxy).
      */
     //'baseurlpath' => 'simplesaml/',
-    'baseurlpath' => '@@@BASEPATHURL@@@',
+    'baseurlpath' => '@@@BASEPATHURL@@@/idp/www',
+
     /*
      * The 'application' configuration array groups a set configuration options
      * relative to an application protected by SimpleSAMLphp.
