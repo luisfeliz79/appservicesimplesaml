@@ -11,7 +11,7 @@ mv /home/site/repository/index.php /home/site/wwwroot
 mv /home/site/repository/testphp.php /home/site/wwwroot
 
 BASEURL="https://$WEBSITE_HOSTNAME/idp/www"
-sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/config/config.php
+sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/config-templates/config.php
 
 
 echo "Copying initial user data to /data if needed"
