@@ -7,6 +7,12 @@ echo "Cleaning up previous files ..."
 rm -R /home/site/wwwroot/*
 echo "Copying app files ..."
 mv /home/site/repository/app/* /home/site/wwwroot/
+mv /home/site/repository/app/.htaccess /home/site/wwwroot
+mv /home/site/repository/index.php /home/site/wwwroot
+
+BASEURL="https://$WEBSITE_HOSTNAME/simplesaml"
+sed -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/simplesamlphp/config/config.php
+
 
 echo "Copying initial user data to /data if needed"
 if [ ! -d /data/config ]; then
@@ -29,7 +35,5 @@ if [ ! -d /data/metadata ]; then
 fi
 
 # do some config work here
-export
-echo "set"
-set
+
 
