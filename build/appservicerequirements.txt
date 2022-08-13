@@ -5,7 +5,7 @@ App Service with
 	Config item
 		General settings
 			Starup command
-				cp /home/site/wwwroot/default /etc/nginx/sites-enabled/default; service nginx restart
+				cp /home/site/repository/build/templates/default /etc/nginx/sites-enabled/default; service nginx restart
 		Path mappings
 			The storage accounts (files) /data
 
