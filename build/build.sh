@@ -5,4 +5,6 @@ mv simplesamlphp* idp
 rm simplesaml.tar.gz
 rm -r idp/config
 cp templates/config.php idp/config-templates/config.php
+cp templates/testphp.php idp/www/testphp.php
+
 

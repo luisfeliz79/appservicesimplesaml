@@ -7,14 +7,11 @@ echo "Cleaning up previous files ..."
 rm -R /home/site/wwwroot/*
 echo "Copying app files ..."
 mv /home/site/repository/app/* /home/site/wwwroot/
-mv /home/site/repository/index.php /home/site/wwwroot
-mv /home/site/repository/testphp.php /home/site/wwwroot
-cp /home/site/wwwroot/index.php /home/site/wwwroot/idp
+cp /home/site/repository/build/templates/default  /etc/nginx/sites-enabled/default
+/etc/nginx/sites-enabled/default
 
 BASEURL="https://$WEBSITE_HOSTNAME"
 sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/config-templates/config.php
-sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/index.php
-sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/index.php
 
 echo "Copying initial user data to /data if needed"
 if [ ! -d /data/config ]; then

@@ -28,7 +28,7 @@ $config = [
      * reverse proxy).
      */
     //'baseurlpath' => 'simplesaml/',
-    'baseurlpath' => '@@@BASEPATHURL@@@/idp/www',
+    'baseurlpath' => '@@@BASEPATHURL@@@/',
 
     /*
      * The 'application' configuration array groups a set configuration options

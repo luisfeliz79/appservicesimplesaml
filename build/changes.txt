@@ -1,0 +1,11 @@
+
+
+changed config.php
+	changed baseurlpath to reflect current services hostname and root path
+	changed salt and password
+
+changed simplesamlphp folder to be named idp
+changed the config folder to be an alias to /data/config (this is used in conjunction with mounted storage)
+changed cert,log, metadata folders to be sourced from /data
+changed the nginx config file to reflect SERVER_PORT 443 to avoid issues with redirection
+
