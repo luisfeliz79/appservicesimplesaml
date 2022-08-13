@@ -1,4 +1,9 @@
 
+echo "Begins post deploy"
+pwd
+
+
+
 if [ ! -d /data/config ]; then
   mkdir /data/config
   cp /home/site/wwwroot/simplesamlphp/config/* /data/config/
