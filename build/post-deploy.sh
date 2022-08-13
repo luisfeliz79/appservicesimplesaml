@@ -4,11 +4,11 @@ if [ ! -d /data/config ]; then
   cp /home/site/wwwroot/simplesamlphp/config/* /data/config/
 fi
 
-if [ ! -f /data/cert ]; then
+if [ ! -d /data/cert ]; then
   mkdir /data/cert
 fi
 
-if [ ! -f /data/log ]; then
+if [ ! -d /data/log ]; then
   mkdir /data/log
 fi
 
