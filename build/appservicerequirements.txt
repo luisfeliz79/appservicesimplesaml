@@ -1,0 +1,11 @@
+
+Storage account
+App Service with
+	Linux/PHP 8
+	Config item
+		General settings
+			Starup command
+				cp /home/default /etc/nginx/sites-enabled/default; service nginx restart
+		Path mappings
+			The storage accounts (files) /data
+
