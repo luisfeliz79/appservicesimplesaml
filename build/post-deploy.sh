@@ -34,6 +34,6 @@ if [ ! -d /data/metadata ]; then
   cp /home/site/wwwroot/simplesamlphp/metadata/* /data/metadata/
 fi
 
-# do some config work here
+# set the environment variable to the config to /data
 
-
+export SIMPLESAMLPHP_CONFIG_DIR=/data/config

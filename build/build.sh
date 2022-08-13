@@ -5,3 +5,4 @@ mv simplesamlphp* simplesamlphp
 rm simplesaml.tar.gz
 
 cp templates/config.php simplesamlphp/config/config.php
+
