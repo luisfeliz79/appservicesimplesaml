@@ -64,7 +64,7 @@ $config = [
      */
     'certdir' => '/data/cert/',
     'loggingdir' => '/data/log/',
-    'datadir' => '/data/data/',
+    'datadir' => 'data/',
     'tempdir' => '/tmp/simplesaml',
 
     /*
@@ -250,7 +250,7 @@ $config = [
      * empty array.
      */
     'debug' => [
-        'saml' => false,
+        'saml' => true,
         'backtraces' => true,
         'validatexml' => false,
     ],
@@ -292,8 +292,8 @@ $config = [
      * Options: [syslog,file,errorlog,stderr]
      *
      */
-    'logging.level' => SimpleSAML\Logger::NOTICE,
-    'logging.handler' => 'syslog',
+    'logging.level' => SimpleSAML\Logger::DEBUG,
+    'logging.handler' => 'file',
 
     /*
      * Specify the format of the logs. Its use varies depending on the log handler used (for instance, you cannot

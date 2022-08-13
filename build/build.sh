@@ -8,3 +8,5 @@ cp templates/config.php idp/config-templates/config.php
 cp templates/testphp.php idp/www/testphp.php
 
 
+#  mv idp ../app/
+
