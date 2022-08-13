@@ -1,8 +1,8 @@
 wget https://github.com/simplesamlphp/simplesamlphp/releases/download/v1.19.6/simplesamlphp-1.19.6.tar.gz -O simplesaml.tar.gz
 
 tar xzf simplesaml.tar.gz
-mv simplesamlphp* simplesamlphp
+mv simplesamlphp* idp
 rm simplesaml.tar.gz
-
-cp templates/config.php simplesamlphp/config/config.php
+rm -r idp/config
+cp templates/config.php idp/config-templates/config.php
 
