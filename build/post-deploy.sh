@@ -8,14 +8,6 @@ rm -R /home/site/wwwroot/*
 echo "Copying app files ..."
 mv /home/site/repository/app/* /home/site/wwwroot/
 
-echo "Updating nginx config and reloading..."
-mkdir /etc
-mkdir /etc/nginx
-mkdir /etc/nginx/sites-enabled
-ls /etc
-cp /home/site/repository/build/templates/default  /etc/nginx/sites-enabled/default
-nginx -s reload
-
 BASEURL="https://$WEBSITE_HOSTNAME"
 sed -i -e "s|@@@BASEPATHURL@@@|${BASEURL}|g" /home/site/wwwroot/idp/config-templates/config.php
 
