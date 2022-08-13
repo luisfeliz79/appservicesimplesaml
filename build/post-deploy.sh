@@ -19,6 +19,7 @@ fi
 
 if [ ! -d /data/cert ]; then
   mkdir /data/cert
+  openssl req -x509 -nodes -days 730 -newkey rsa:2048 -keyout /data/cert/server.pem -out /data/cert/server.crt -config /home/site/repository/templates/sign-cert.conf -extensions  'v3_req'
 fi
 
 if [ ! -d /data/log ]; then
