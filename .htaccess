@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} ^(.*)
+    RewriteRule ^(.*)$ /public/$1 [NC,L,QSA]
+</IfModule>
+
+
+SetEnv SIMPLESAMLPHP_CONFIG_DIR /data/config
+
+Alias /simplesaml /home/site/wwwroot/simplesamlphp/www
