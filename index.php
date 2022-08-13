@@ -1,1 +1,1 @@
-<?php header("Location: @@@BASEURL@@@/idp/www"); ?>
+<?php header("Location: @@@BASEPATHURL@@@/idp/www"); ?>
